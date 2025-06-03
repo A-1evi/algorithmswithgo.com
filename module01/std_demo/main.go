@@ -1,7 +1,7 @@
 package main
 
 import (
-	"algo/module01"
+	"algorithmswithgo/module01"
 	"fmt"
 )
 

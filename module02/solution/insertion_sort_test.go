@@ -1,7 +1,7 @@
 package module02
 
 import (
-	"algo/module02/sorttest"
+	"algorithmswithgo/module02/sorttest"
 	"testing"
 )
 
