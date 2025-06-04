@@ -8,10 +8,11 @@ import (
 func main() {
 	var n int
 	fmt.Scanf("%d", &n)
-	for i := 0; i < n; i++ {
+	for i := 0; i <= n; i++ {
 		var a, b int
 		fmt.Scanf("%d %d", &a, &b)
 		gcd := module01.GCD(a, b)
-		fmt.Println(gcd)
+		fmt.Printf("The gcd of a , b : %d\n", gcd)
 	}
+
 }
