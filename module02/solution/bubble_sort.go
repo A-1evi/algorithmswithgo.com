@@ -39,33 +39,33 @@ func BubbleSortString(list []string) {
 
 // BubbleSortPerson uses bubble sort to sort Person slices by: Age, then
 // LastName, then FirstName. Try implementing it for practice.
-func BubbleSortPerson(people []Person) {
-	less := func(a, b Person) bool {
-		if a.Age != b.Age {
-			return a.Age < b.Age
-		}
-		if a.LastName != b.LastName {
-			return a.LastName < b.LastName
-		}
-		return a.FirstName < b.FirstName
-	}
-	// Option 1 - write this by hand
-	for sweepNum := 0; sweepNum < len(people); sweepNum++ {
-		swapped := false
-		for i := 0; i < len(people)-1-sweepNum; i++ {
-			if less(people[i+1], people[i]) {
-				people[i], people[i+1] = people[i+1], people[i]
-				swapped = true
-			}
-		}
-		if !swapped {
-			break
-		}
-	}
-	// Option 2 - implement the sort.Interface and use our sort.Interface impl.
-	// See person.go for a bit more info/code showing how this People type works.
-	// BubbleSort(People(people))
-}
+// func BubbleSortPerson(people []Person) {
+// 	less := func(a, b Person) bool {
+// 		if a.Age != b.Age {
+// 			return a.Age < b.Age
+// 		}
+// 		if a.LastName != b.LastName {
+// 			return a.LastName < b.LastName
+// 		}
+// 		return a.FirstName < b.FirstName
+// 	}
+// 	// Option 1 - write this by hand
+// 	for sweepNum := 0; sweepNum < len(people); sweepNum++ {
+// 		swapped := false
+// 		for i := 0; i < len(people)-1-sweepNum; i++ {
+// 			if less(people[i+1], people[i]) {
+// 				people[i], people[i+1] = people[i+1], people[i]
+// 				swapped = true
+// 			}
+// 		}
+// 		if !swapped {
+// 			break
+// 		}
+// 	}
+// 	// Option 2 - implement the sort.Interface and use our sort.Interface impl.
+// 	// See person.go for a bit more info/code showing how this People type works.
+// 	// BubbleSort(People(people))
+// }
 
 // BubbleSort uses the standard library's sort.Interface to sort
 // This one is likely going to be a little more challenging to implement.
